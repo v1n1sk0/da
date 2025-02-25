@@ -8,11 +8,9 @@ def filter_by_state(list_of_dicts: list[Any], state: str = "EXECUTED") -> list[A
             correct_list.append(list_of_dicts[num_dict])
     return correct_list
 
-
 def sort_by_date(list_of_dicts: list[Any], sorting_direct: bool = True) -> list[Any]:
     """Сортирует список по датам в словарях по убыванию (по умолчанию)"""
     return sorted(list_of_dicts, key=lambda x: x.get("date"), reverse=sorting_direct)
-
 print(
     filter_by_state(
         [
